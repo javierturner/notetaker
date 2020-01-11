@@ -23,11 +23,23 @@ module.exports = function(app) {
             res.json(results)
         })
     });
+
+    app.delete("/api/notes/:id", (req, res) => {
+        const deleted = notesData.findIndex((i) => i.id == req.params.id);
+        notesData.splice(deleted, 1);
+        reWrite();
+        res.json(notesData);
+    })
     
-
-    app.post("/api/clear", function(req, res) {
-        notesData.length = 0;
-
-        res.json({ ok: true});
+let reWrite = () => {
+    let newData = JSON.stringify(notesData);
+    fs.writeFile("db/db.json", newData, err => { 
+        if (err) throw err
     });
+}
+    // app.post("/api/clear", function(req, res) {
+    //     notesData.length = 0;
+
+    //     res.json({ ok: true});
+    // });
 };
