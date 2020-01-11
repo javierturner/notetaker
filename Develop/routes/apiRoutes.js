@@ -1,4 +1,5 @@
 const notesData = require("../db/db.json");
+const fs = require("fs");
 
 module.exports = function(app) {
     app.get("/api/notes", function(req, res) {
@@ -6,9 +7,23 @@ module.exports = function(app) {
     });
 
     app.post("/api/notes", function(req, res) {
-        notesData.push(req.body);
-        res.json(true);
+        const note = req.body;
+        if (notesData.length == 0) {
+            note.id = 1
+        } else {
+            note.id = notesData[notesData.length - 1].id + 1
+        }
+        notesData.push(note);
+        console.log(notesData);
+
+        // res.json(true);
+
+        fs.writeFile("/db/db.json", JSON.stringify(notesData), (results, err) => {
+            if (err) console.log(err)
+            res.json(results)
+        })
     });
+    
 
     app.post("/api/clear", function(req, res) {
         notesData.length = 0;
