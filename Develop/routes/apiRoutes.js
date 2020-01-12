@@ -37,9 +37,4 @@ let reWrite = () => {
         if (err) throw err
     });
 }
-    // app.post("/api/clear", function(req, res) {
-    //     notesData.length = 0;
-
-    //     res.json({ ok: true});
-    // });
 };
