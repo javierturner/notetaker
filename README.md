@@ -7,6 +7,7 @@ This application can be used to write, save, and delete notes easily throughout 
 
 ![Note Taking Application](develop/public/assets/images/NoteTakerApp.gif)
 
+
 ##Links to deployed application
 Github Pages: https://github.com/javierturner/notetaker
 Deployed Application: 
