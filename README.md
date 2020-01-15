@@ -10,7 +10,7 @@ This application can be used to write, save, and delete notes easily throughout 
 
 ##Links to deployed application
 Github Pages: https://github.com/javierturner/notetaker
-Deployed Application: 
+Deployed Application: https://thawing-cliffs-93765.herokuapp.com/
 
 ##How To Use
 
