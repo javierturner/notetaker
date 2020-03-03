@@ -1,30 +1,30 @@
 # JT Turner Note Taker
 
-##Description
+## Description
 This application can be used to write, save, and delete notes easily throughout the day. Upon entry, notes are saved into a JSON file which is retrieved with an express backend.
 
-##Screenshots of completed application
+## Screenshots of completed application
 
 ![Note Taking Application](develop/public/assets/images/NoteTakerApp.gif)
 
 
-##Links to deployed application
+## Links to deployed application
 Github Pages: https://github.com/javierturner/notetaker
 Deployed Application: https://thawing-cliffs-93765.herokuapp.com/
 
-##How To Use
+## How To Use
 
 There is no installation required for this project. Simply click on Get Started and type a Title and Note. A save button will then appear in the upper right corner, and the note will appear on the left of the screen.
 
 Once you are done with the note, you can delete it by clicking the delete icon to the left of each note, and it will remove it from the JSON file.
 
 
-##Credits
+## Credits
 
 ° https://expressjs.com/en/starter/static-files.html
 
 
-##License
+## License
 
 MIT License
 
